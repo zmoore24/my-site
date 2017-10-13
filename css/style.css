@@ -1,0 +1,100 @@
+/* html and body default styles */
+html, body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%;
+    margin: 0 0 0 0 !important;
+}
+
+/* document body */
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+/* circle container */
+.circle {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* the header */
+.header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 1em;
+}
+
+/* the nav bar */
+.nav {
+    align-self: stretch;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+
+    background-color: #2980b9;
+    padding: 1em;
+}
+
+/* remove link coloring/styles */
+.nav-link a {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: .7em;
+    padding-right: .7em;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: url("../images/fav-animal.cur"), auto;    
+}
+
+.nav-link a i {
+    margin-right: 0.3em;
+}
+
+/* add a nice yellow to the active link */
+.nav-link.active a {
+    color: #f1c40f;
+}
+
+/* the body of the page */
+.main {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
+    padding: 1em;
+}
+
+/* images in the main section */
+.main-image {
+    align-self: center;
+    max-width: 100%;
+}
+
+/* the footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+    margin-top: auto;
+    flex-shrink: 0;
+    color: white;
+    background-color: #2980b9;
+}
+
+/* hide nav link icons when the screen gets too small */
+@media screen and (max-width: 530px) {
+    .nav-link a i  {
+        display: none;
+    }
+}
